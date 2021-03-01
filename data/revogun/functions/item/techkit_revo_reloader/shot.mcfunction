@@ -8,7 +8,7 @@
     playsound minecraft:block.note_block.bit player @a ~ ~ ~ 1 2
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 2 2
     playsound minecraft:entity.zombie.attack_wooden_door player @a ~ ~ ~ 1 2
-    scoreboard players set @s Revo.Delay 4
+    scoreboard players set @s Revo.Delay 3
     #tag @s add Revo.Hold_Delay
 
 # 弾を召喚
@@ -21,4 +21,4 @@
 
 # バースト
     scoreboard players remove @s Revo.Burst 1
-    #scoreboard players remove @s Revo.Ammo 1
+    scoreboard players remove @s Revo.Ammo 1
