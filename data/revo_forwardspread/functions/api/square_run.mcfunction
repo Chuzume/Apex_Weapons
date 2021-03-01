@@ -9,9 +9,9 @@ scoreboard players operation #distanceC ForwardSpread *= #1000 ForwardSpread
 scoreboard players operation #r^2 ForwardSpread = #spreadC/2 ForwardSpread
 scoreboard players operation #r^2 ForwardSpread *= #spreadC/2 ForwardSpread
 
-function forwardspread:core/pitch
-function forwardspread:core/yaw
-function forwardspread:core/square_randomizer
-function forwardspread:core/vec
+function revo_forwardspread:core/pitch
+function revo_forwardspread:core/yaw
+function revo_forwardspread:core/square_randomizer
+function revo_forwardspread:core/vec
 
-execute at 0-0-0-0-a run function #forwardspread:return
+execute at 0-0-0-0-a run function #revo_forwardspread:return

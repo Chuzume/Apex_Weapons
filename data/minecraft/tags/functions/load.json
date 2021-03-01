@@ -1,5 +1,5 @@
 {
   "values": [
-    "revogun:load","forwardspread:core/load"
+    "revogun:load","revo_forwardspread:core/load","revo_score_damage:core/init"
   ]
 }

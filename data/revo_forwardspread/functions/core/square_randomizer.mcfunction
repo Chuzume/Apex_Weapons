@@ -1,6 +1,6 @@
-function forwardspread:core/random
+function revo_forwardspread:core/random
 scoreboard players operation #vexX ForwardSpread = #Rand_Out ForwardSpread
-function forwardspread:core/random
+function revo_forwardspread:core/random
 scoreboard players operation #vexY ForwardSpread = #Rand_Out ForwardSpread
 
 # (x^2+y^2) > r^2
@@ -12,5 +12,3 @@ scoreboard players operation #tmpY ForwardSpread *= #vexY ForwardSpread
 
 scoreboard players operation #distance ForwardSpread = #tmpX ForwardSpread
 scoreboard players operation #distance ForwardSpread += #tmpY ForwardSpread
-
-execute if score #distance ForwardSpread > #r^2 ForwardSpread run function forwardspread:core/circle_randomizer

@@ -13,7 +13,7 @@
 
 # 弾を召喚
     execute anchored eyes run summon armor_stand ^-0.25 ^ ^ {Invisible:1b,Marker:1b,Small:1b,Tags:["RevoGunBullet","RevoGunBulletInit"]}
-    execute anchored eyes positioned ^-0.25 ^-1.65 ^ run function forwardspread:api/circle_run
+    execute anchored eyes positioned ^-0.25 ^-1.65 ^ run function revo_forwardspread:api/circle_run
     execute as @e[type=armor_stand,tag=RevoGunBulletInit] at @s run function revogun:entity/bullet/init
 
 # リセット

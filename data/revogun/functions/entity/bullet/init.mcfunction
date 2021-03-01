@@ -1,4 +1,4 @@
-#function forwardspread:api/circle_run
+#function revo_forwardspread:api/circle_run
 execute facing entity @e[type=area_effect_cloud,tag=RevoGunSpread] feet run tp @s ~ ~ ~ ~ ~
 tp @s ~ ~-0.15 ~
 kill @e[type=area_effect_cloud,tag=RevoGunSpread]

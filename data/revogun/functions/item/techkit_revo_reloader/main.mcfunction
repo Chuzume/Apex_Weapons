@@ -3,7 +3,7 @@
     #particle soul_fire_flame ~ ~ ~ 0 0 0 0.05 1
 
 # 発砲
-    execute unless score @s Revo.Delay matches 0.. if score @s Revo.Ammo matches 1.. if score @s Revo.Shot matches 1.. run scoreboard players set @s Revo.Burst 1
+    execute unless score @s Revo.Delay matches 0.. if score @s Revo.Ammo matches 1.. if score @s Revo.Shot matches 1.. run scoreboard players set @s Revo.Burst 3
     execute if score @s Revo.Burst matches 1.. run function revogun:item/techkit_revo_reloader/shot
 
 # 弾切れならリロード処理に
