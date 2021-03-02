@@ -1,8 +1,8 @@
-#> thwe_score_damage:core/health_subtract
+#> revo_score_damage:core/health_subtract
 #
 # MobのHealthを減算する
 #
-# @within function thwe_score_damage:core/attack
+# @within function revo_score_damage:core/attack
 
 #> Temp
 # @private
@@ -23,7 +23,7 @@
         execute if score $Health ScoreDamageCore matches ..0 run kill @s
 # 演出
     #execute if score $Health ScoreDamageCore matches 1.. if entity @s[type=!player] run data modify entity @s ActiveEffects append value {Id:19b,Amplifier:4b,Duration:1}
-    function thwe_score_damage:core/damage_indicator
+    function revo_score_damage:core/damage_indicator
 # リセット
     scoreboard players reset $Damage ScoreDamageCore
     scoreboard players reset $Health ScoreDamageCore

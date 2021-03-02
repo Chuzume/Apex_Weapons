@@ -5,8 +5,8 @@
     data modify storage chuz:context Item.Offhand set from entity @s Inventory[{Slot:-106b}]
 
 # いろいろする
-    execute if entity @s[tag=RevoGunTest] unless data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader} run function revogun:item/techkit_revo_reloader/reload_replace
-    execute if entity @s[tag=RevoGunTest] if data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader} run function revogun:item/techkit_revo_reloader/reload_give
+    execute if entity @s[tag=Revo.Test] unless data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader} run function revogun:item/techkit_revo_reloader/reload_replace
+    execute if entity @s[tag=Revo.Test] if data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader} run function revogun:item/techkit_revo_reloader/reload_give
     execute if data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader} run function revogun:item/techkit_revo_reloader/main
     execute if data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader_Reloading} run function revogun:item/techkit_revo_reloader/reloading
     execute unless data storage chuz:context Item.Mainhand.tag{ItemName:TechKit_Revo_Reloader_Reloading} run scoreboard players reset @s Revo.Reload

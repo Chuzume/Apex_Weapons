@@ -1,8 +1,8 @@
-#> thwe_score_damage:core/calc
+#> revo_score_damage:core/calc
 #
 # 与えるダメージを計算します
 #
-# @within function thwe_score_damage:core/attack
+# @within function revo_score_damage:core/attack
 
 #> Temp
 # @private

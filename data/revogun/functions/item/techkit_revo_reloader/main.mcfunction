@@ -1,5 +1,5 @@
 
-    tag @s add RevoGunHold
+    tag @s add Revo.Hold
     #particle soul_fire_flame ~ ~ ~ 0 0 0 0.05 1
 
 # 発砲
@@ -7,7 +7,7 @@
     execute if score @s Revo.Burst matches 1.. run function revogun:item/techkit_revo_reloader/shot
 
 # 弾切れならリロード処理に
-    execute unless score @s Revo.Ammo matches 1.. run replaceitem entity @s weapon.mainhand crossbow{display:{Name:'{"text":"TechKit: Revo Reloader <Reloading>","color":"gold","italic":false}',Lore:['{"text":" "}','{"text":"[Reloading!]","color":"white","italic":false}','{"text":" "}','{"text":"\\"もっと大事に扱ってよ！\\"","color":"gray","italic":false}']},HideFlags:7,Unbreakable:1b,CustomModelData:10,ItemName:TechKit_Revo_Reloader_Reloading,Enchantments:[{id:"minecraft:quick_charge",lvl:6s}]} 1
+    execute unless score @s Revo.Ammo matches 1.. run function revogun:item/techkit_revo_reloader/reload_start_alt
     #execute unless score @s Revo.Ammo matches 1.. run function revogun:item/techkit_revo_reloader/reload_start_clear
 
 # 発砲後即座に交換
@@ -27,4 +27,4 @@
     title @s actionbar ["",{"text":"| Ammo: "},{"score":{"name":"@s","objective":"Revo.Ammo"}},{"text":" |"}]
 
 # タグ付与
-    tag @s add RevoGunHold
+    tag @s add Revo.Hold

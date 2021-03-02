@@ -1,8 +1,8 @@
-#> thwe_score_damage:core/get_default_epf
+#> revo_score_damage:core/get_default_epf
 #
 # プロテクションのEPFを取得します
 #
-# @within function thwe_score_damage:core/get_status
+# @within function revo_score_damage:core/get_status
 
 #> Temp
 # @private

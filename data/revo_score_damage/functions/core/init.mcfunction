@@ -1,4 +1,4 @@
-#> thwe_score_damage:core/init
+#> revo_score_damage:core/init
 #
 # スコアボードを用意する
 #
@@ -6,7 +6,7 @@
 
 #> 詳細はfunctionのホバー情報を確認してください
 # @public
-    #declare storage thwe_score_damage:
+    #declare storage revo_score_damage:
 
 #> Private
 # @internal
