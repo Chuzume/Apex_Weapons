@@ -11,9 +11,5 @@
     execute anchored eyes run summon area_effect_cloud ^ ^ ^10 {Duration:-1,Age:-2147483648,WaitTime:-2147483648,Tags:["Revo.Spread"]}
     execute as @e[type=armor_stand,tag=Revo.BulletInit] at @s run function revogun:entity/bullet/init
 
-# リセット
-    #advancement revoke @s only revogun:shot_crossbow
-    tag @s remove Revo.NowADS
-
-# バースト
+# 弾丸消費
     scoreboard players remove @s Revo.Ammo 1

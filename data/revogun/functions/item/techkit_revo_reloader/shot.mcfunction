@@ -15,13 +15,9 @@
     execute anchored eyes positioned ^-0.25 ^-1.65 ^ run function revo_forwardspread:api/circle_run
     execute as @e[type=armor_stand,tag=Revo.BulletInit] at @s run function revogun:entity/bullet/init
 
-# リセット
-    #advancement revoke @s only revogun:shot_crossbow
-
-# バースト
+# 弾丸消費
     scoreboard players remove @s Revo.Ammo 1
 
 # リセット
     scoreboard players reset $spread ForwardSpread
     scoreboard players reset $distance ForwardSpread
-    tag @s remove Revo.NowNormal
