@@ -6,3 +6,6 @@ tag @s add Revo.Bullet
 tag @s remove Revo.BulletInit
 scoreboard players set @s Revo.Speed 20
 scoreboard players set @s Revo.Range 200
+
+# UUIDコピー
+    execute run data modify entity @s ArmorItems[0].tag.OwnerUUID set from entity @p UUID

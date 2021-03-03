@@ -5,6 +5,6 @@
       }
     },
     "rewards": {
-      "function": "revogun:test"
+      "function": "revogun:replaceitem"
     }
   }

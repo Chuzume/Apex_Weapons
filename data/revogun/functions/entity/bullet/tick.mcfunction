@@ -16,7 +16,6 @@
     execute if entity @s[scores={Revo.Recursion=1..,Revo.Range=1..}] run tp @s ^ ^ ^0.25 ~ ~
 
 # プレイヤーから出るまでヒット判定ナシ
-    #execute at @s unless entity @p[distance=..3] run tag @s add Revo.NoHitUser
     execute at @s positioned ~-0.5 ~-0.5 ~-0.5 unless entity @a[dx=0] run tag @s add Revo.NoHitUser
 
 # スコア減算
@@ -24,7 +23,7 @@
     scoreboard players remove @s Revo.Range 1
 
 # プレイヤーの衝突判定
-    execute if entity @s[tag=Revo.NoHit,tag=Revo.NoHitUser] positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,type=!#revogun:unhurtable,sort=nearest,limit=1] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=!#revogun:unhurtable,sort=nearest,limit=1] at @s run function revogun:entity/bullet/hit
+    execute if entity @s[tag=Revo.NoHit,tag=Revo.NoHitUser] positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,type=!#revogun:unhurtable,tag=!Revo.Unhurtable,sort=nearest,limit=1] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,type=!#revogun:unhurtable,tag=!Revo.Unhurtable,sort=nearest,limit=1] at @s run function revogun:entity/bullet/hit
 
 # 壁の衝突判定
     execute unless block ~ ~ ~ #revogun:no_collision run function revogun:entity/bullet/break

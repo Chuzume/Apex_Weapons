@@ -1,5 +1,5 @@
 # ホログラム銃を召喚
-    tag @s add Revo.Test
+    tag @s add Revo.Swap
 
 # 音
     playsound entity.enderman.teleport player @a ~ ~ ~ 1 2

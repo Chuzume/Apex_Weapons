@@ -21,6 +21,8 @@
         execute if entity @s[type=!player] if score $Health ScoreDamageCore matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $Health ScoreDamageCore
     # Common
         execute if score $Health ScoreDamageCore matches ..0 run kill @s
+        execute if score $Health ScoreDamageCore matches 1.. run function revogun:uuid_hit_no_kb
+
 # 演出
     #execute if score $Health ScoreDamageCore matches 1.. if entity @s[type=!player] run data modify entity @s ActiveEffects append value {Id:19b,Amplifier:4b,Duration:1}
     function revo_score_damage:core/damage_indicator

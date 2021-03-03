@@ -1,5 +1,6 @@
 #まぁまずはアイテムが必要であろう
-give @s crossbow{display:{Name:'{"text":"World Enchanter","color":"aqua","italic":false}',Lore:['{"text":" "}','{"text":"[RClick: Enchant]","color":"white","italic":false}','{"text":"[Sneak+Rclick: Disenchant]","color":"white","italic":false}','{"text":" "}','{"text":"世界に無意味な輝きをもたらす。","color":"gray","italic":false}']},HideFlags:37,Unbreakable:1b,CustomModelData:5,ItemName:World_Enchanter,Charged:1b,Enchantments:[{id:"minecraft:quick_charge",lvl:6s}]} 1
+give @s crossbow{display:{Name:'{"text":"TechKit: Revo Reloader","color":"gold","italic":false}',Lore:['{"text":" "}','{"text":"[RClick:Shot]","color":"white","italic":false}','{"text":"[Sneak: ADS]","color":"white","italic":false}','{"text":"[Drop: Reload]","color":"white","italic":false}','{"text":" "}','{"text":"\\"ヴォルトを目指せ！\\"","color":"gray","italic":false}']},HideFlags:7,Unbreakable:1b,CustomModelData:9,Charged:1b,ItemName:TechKit_Revo_Reloader,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:-100,Operation:0,UUID:[I;-1325817302,-411482978,-1222952476,823678823],Slot:"mainhand"}]} 1
+
 
 #次回以降も実行するためにレシピ没収
 recipe take @s revogun:techkit_revo_reloader

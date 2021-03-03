@@ -12,6 +12,7 @@
     scoreboard objectives add Revo.Reload dummy
     scoreboard objectives add Revo.Ammo dummy
     scoreboard objectives add Revo.Spin dummy
+    scoreboard objectives add Revo.Sound dummy
 
 # Chuz.Vector0が存在しなければ召喚
     execute unless entity @e[type=area_effect_cloud,tag=Chuz.Vector0] run summon minecraft:area_effect_cloud 0 0 0 {Tags:["Chuz.Vector0"],Duration:-1,Age:-2147483648,WaitTime:-2147483648}

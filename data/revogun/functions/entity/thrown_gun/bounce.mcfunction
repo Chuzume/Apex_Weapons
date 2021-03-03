@@ -5,7 +5,10 @@
     #scoreboard players reset @s Revo.Speed
 
 # 跳ねる(固定値)
-    data modify entity @s Motion[1] set value 0.7d
+    data modify entity @s Motion[1] set value 0.5d
+
+# AoE
+    execute as @e[type=!#revogun:unhurtable,tag=!Revo.Unhurtable,distance=..2] run function revogun:entity/thrown_gun/damage
 
 # 音
-    playsound minecraft:block.note_block.bit neutral @a ~ ~ ~ 2 1
+    function revogun:entity/thrown_gun/hit_wall
