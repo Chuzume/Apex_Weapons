@@ -7,10 +7,9 @@
     execute rotated as @s run function revogun:move_xz
     #kill @s[tag=Col_Hit_Y]
     execute if entity @s[nbt={OnGround:1b}] run function revogun:entity/thrown_gun/bounce
-    #scoreboard players set @s Chuz.Speed 6
 
 # 滞空時間でバウンド力変わる
-    scoreboard players add @s Revo.Speed 1
+    scoreboard players add @s Revo.Speed 6
 
 # 時間経過で消える
     scoreboard players add @s Revo.Time 1
@@ -21,6 +20,9 @@
     
 # 壁に接触
     execute if entity @s[tag=Chuz.HitWall] run function revogun:entity/thrown_gun/hit_wall
+
+# パーティクル 
+    particle end_rod ~ ~0.75 ~ 0 0 0 0 0 force @a[distance=..40]
 
 # ぐるぐる
     execute store result entity @s Pose.Head[1] float 1 run scoreboard players remove @s Revo.Spin 8

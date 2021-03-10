@@ -9,3 +9,6 @@ scoreboard players set @s Revo.Range 200
 
 # UUIDコピー
     execute run data modify entity @s ArmorItems[0].tag.OwnerUUID set from entity @p UUID
+
+# スコアコピー
+    scoreboard players operation @s Revo.En.ID = @p Revo.Pl.ID

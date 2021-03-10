@@ -1,8 +1,9 @@
 
 # パーティクル
-    particle explosion ~ ~ ~ 0 0 0 0 0 force
-    particle minecraft:dust 0.3 1 1 1 ~ ~ ~ 0.5 0.5 0.5 0 25
-    particle minecraft:dust 0 0.75 1 0.75 ~ ~ ~ 0.5 0.5 0.5 0 25
+    particle explosion ~ ~0.75 ~ 0 0 0 0 0 force @a[distance=..40]
+    particle minecraft:dust 0.3 1 1 1 ~ ~0.75 ~ 0.5 0.5 0.5 0 25 force @a[distance=..40]
+    particle minecraft:dust 0 0.75 1 0.75 ~ ~0.75 ~ 0.5 0.5 0.5 0 25 force @a[distance=..40]
+    particle end_rod ~ ~0.75 ~ 0 0 0 0.1 10 force @a[distance=..40]
 
 # サウンド
     playsound minecraft:entity.zombie_villager.cure neutral @a ~ ~ ~ 2 2

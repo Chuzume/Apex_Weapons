@@ -1,6 +1,6 @@
 
 # 拡散と距離の設定
-    scoreboard players set $spread ForwardSpread 20
+    scoreboard players operation $spread ForwardSpread = @s Revo.Spread
     scoreboard players set $distance ForwardSpread 210
     
 # 発砲!
@@ -17,6 +17,9 @@
 
 # 弾丸消費
     scoreboard players remove @s Revo.Ammo 1
+
+# 精度上昇
+    scoreboard players remove @s[scores={Revo.Spread=2..}] Revo.Spread 3
 
 # リセット
     scoreboard players reset $spread ForwardSpread

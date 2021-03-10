@@ -1,4 +1,7 @@
 
+# 何で攻撃されたのかタグ付与
+    tag @s add Revo.Hit.Bullet
+
 # ヘッドショットテスト
     execute anchored eyes positioned ^ ^ ^ positioned ~-0.5 ~-0.5 ~-0.5 if entity @e[type=armor_stand,tag=Revo.Bullet,dx=0] run function revogun:entity/bullet/hit_headshot
 

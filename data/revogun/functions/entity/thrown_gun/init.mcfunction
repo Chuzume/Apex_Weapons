@@ -13,6 +13,9 @@
 # UUIDコピー
     execute run data modify entity @s ArmorItems[0].tag.OwnerUUID set from entity @p UUID
     
+# スコアコピー
+    scoreboard players operation @s Revo.En.ID = @p Revo.Pl.ID
+    
 # タグ設定
     tag @s remove Revo.ThrownGunInit
     tag @s add Revo.ThrownGun

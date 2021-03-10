@@ -14,6 +14,9 @@
 # ストレージ
     execute as @a at @s run function revogun:storage
 
+# スコアID
+    execute as @a unless score @s Revo.Pl.ID matches 0.. run function revogun:score_id/player_score_id
+
 # 弾丸
     execute as @e[type=armor_stand,tag=Revo.Bullet] at @s run function revogun:entity/bullet/tick
 

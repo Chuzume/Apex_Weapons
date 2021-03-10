@@ -1,9 +1,8 @@
 
 # 当たるわけねぇ！
     execute anchored eyes run summon armor_stand ^-0.25 ^ ^ {Silent:1b,Invisible:1b,Marker:1b,Small:1b,Tags:["Revo.NoHit","Revo.BulletInit"]}
-    #execute run data modify entity @e[tag=Revo.BulletInit,sort=nearest,limit=1] ArmorItems[0].tag.OwnerUUID set from entity @s ArmorItems[0].tag.OwnerUUID
     function revo_forwardspread:api/circle_run
-    execute as @e[type=armor_stand,tag=Revo.BulletInit] at @s run function revogun:entity/bullet/init
+    execute as @e[type=armor_stand,tag=Revo.BulletInit] at @s run function revogun:entity/bullet/init_spread
     scoreboard players remove @s Revo.Ammo 1
 
 # 音

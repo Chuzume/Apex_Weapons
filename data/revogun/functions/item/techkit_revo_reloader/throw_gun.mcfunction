@@ -4,3 +4,6 @@
 
 # 音
     playsound minecraft:entity.arrow.shoot player @a ~ ~ ~ 1 0
+
+# 精度リセット
+    scoreboard players set @s Revo.Spread 25
