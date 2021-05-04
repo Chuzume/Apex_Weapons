@@ -1,0 +1,3 @@
+    tag @s remove Moza_Swap
+    #clear @s crossbow 1
+    give @s crossbow{display:{Name:'{"text":"TechKit: Revo Reloader <Reloading>","color":"gold","italic":false}',Lore:['{"text":" "}','{"text":"[Reloading!]","color":"white","italic":false}','{"text":" "}','{"text":"\\"もっと大事に扱ってよ！\\"","color":"gray","italic":false}']},HideFlags:7,Unbreakable:1b,CustomModelData:11,ItemName:TechKit_Revo_Reloader_Reloading,Enchantments:[{id:"minecraft:quick_charge",lvl:6s}]} 1
