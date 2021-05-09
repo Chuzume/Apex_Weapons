@@ -2,20 +2,15 @@
 # スコアボード作成
     scoreboard objectives add Moza_Throw minecraft.dropped:minecraft.crossbow
     scoreboard objectives add Moza_Shot minecraft.used:minecraft.crossbow
-    scoreboard objectives add Chuz.Temporary dummy
     scoreboard objectives add Moza_Time dummy
     scoreboard objectives add Moza_Range dummy
     scoreboard objectives add Moza_Speed dummy
+    scoreboard objectives add Moza_Temp dummy
     scoreboard objectives add Moza_Recursion dummy
-    scoreboard objectives add Moza_Burst dummy
     scoreboard objectives add Moza_Delay dummy
     scoreboard objectives add Moza_Reload dummy
     scoreboard objectives add Moza_Ammo dummy
     scoreboard objectives add Moza_Spin dummy
-    scoreboard objectives add Moza_Sound dummy
-    scoreboard objectives add Moza_Spread dummy
-    scoreboard objectives add Moza_Fall dummy
-    scoreboard objectives add Moza_Charge dummy
     scoreboard objectives add Moza_Install dummy
 
 # スコアIDだ
@@ -28,6 +23,7 @@
     execute unless entity @e[type=area_effect_cloud,tag=Chuz.Vector0] run summon minecraft:area_effect_cloud 0 0 0 {Tags:["Chuz.Vector0"],Duration:-1,Age:-2147483648,WaitTime:-2147483648}
     
 # 時たま使い回されるスコアボード
+    scoreboard objectives add Chuz.Temporary dummy
     scoreboard objectives add Col_Check_Temp dummy
     scoreboard objectives add Col_Check_X dummy
     scoreboard objectives add Col_Check_Y dummy

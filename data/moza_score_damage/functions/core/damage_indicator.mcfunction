@@ -1,8 +1,8 @@
-#> revo_score_damage:core/damage_indicator
+#> moza_score_damage:core/damage_indicator
 #
 # 二分探索でparticleを表示する
 #
-# @within function revo_score_damage:core/health_subtract
+# @within function moza_score_damage:core/health_subtract
 
 # 値は10000倍されたものなのでDamage /= 10000する
 # 更に、damage_indicatorの表示はハート単位なのでDamage /= 2する

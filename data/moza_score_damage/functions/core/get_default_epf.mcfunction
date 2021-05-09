@@ -1,8 +1,8 @@
-#> revo_score_damage:core/get_default_epf
+#> moza_score_damage:core/get_default_epf
 #
 # プロテクションのEPFを取得します
 #
-# @within function revo_score_damage:core/get_status
+# @within function moza_score_damage:core/get_status
 
 #> Temp
 # @private

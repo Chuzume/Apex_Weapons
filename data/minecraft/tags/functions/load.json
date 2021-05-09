@@ -1,5 +1,5 @@
 {
   "values": [
-    "mozambique:load","revo_forwardspread:core/load","revo_score_damage:core/init","score_to_health:load"
+    "mozambique:load","moza_score_damage:core/init","score_to_health:load"
   ]
 }

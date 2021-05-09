@@ -1,4 +1,7 @@
 
+# 爆發
+    execute if entity @s[type=end_crystal] run summon tnt
+
 # 何で攻撃されたのかタグ付与
     tag @s add Moza_Hit.Bullet
 
@@ -12,5 +15,5 @@
     #execute if entity @s[type=!player] run function mozambique:uuid_hit_no_kb
     
 # ダメージを設定
-    data merge storage revo_score_damage: {Damage:2.00}
-    execute at @s run function revo_score_damage:api/attack
+    execute if entity @s[type=!end_crystal] run data merge storage moza_score_damage: {Damage:2.5}
+    execute if entity @s[type=!end_crystal] run function moza_score_damage:api/attack

@@ -5,6 +5,6 @@
       }
     },
     "rewards": {
-      "function": "mozambique:replaceitem"
+      "function": "mozambique:tick_advancement"
     }
   }

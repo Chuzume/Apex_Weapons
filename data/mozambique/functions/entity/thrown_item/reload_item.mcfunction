@@ -7,7 +7,7 @@
 
 # 比較
     execute store success score $isSuccess Chuz.Temporary run data modify storage chuz:context UUID set from storage chuz:context DropItem.Thrower
-    execute if score $isSuccess Chuz.Temporary matches 0 if data storage chuz:context DropItem.Item.tag{ItemName:TechKit_Revo_Reloader} as @a[tag=Chuz.This,limit=1] run function mozambique:item/mozambique/reload_start
+    execute if score $isSuccess Chuz.Temporary matches 0 if data storage chuz:context DropItem.Item.tag{ItemName:Mozambique} as @a[tag=Chuz.This,limit=1] run function mozambique:item/mozambique/reload_start_alt
 
 # キル
     kill @s
