@@ -1,6 +1,8 @@
 
 # リロード
-    execute if entity @s[tag=Moza_Hold,scores={Moza_Throw=0..,Moza_Ammo=..5}] unless score @s Moza_Delay matches 0.. run function mozambique:item/mozambique/reload
+    execute if entity @s[scores={Moza_Throw=0..,Moza_Ammo=..5}] unless score @s Moza_Delay matches 0.. run function mozambique:item/mozambique/reload
+
+# リロードではない
     execute if entity @s[tag=Moza_Hold,scores={Moza_Throw=0..,Moza_Ammo=6}] run function mozambique:item/mozambique/not_reload
     execute if entity @s[tag=Moza_Hold,scores={Moza_Throw=0..,Moza_Delay=0..}] run function mozambique:item/mozambique/not_reload
     tag @s[tag=Moza_Hold] remove Moza_Hold

@@ -23,10 +23,11 @@
         execute if entity @s[type=player] run scoreboard players operation @s ScoreToHealth -= $Damage ScoreDamageCore
         execute if entity @s[type=player] if score $hasDependency ScoreDamageCore matches 0 run tellraw @a [{"text":"ERROR >> ","color":"red"},{"text":"ScoreToHealth","underlined":true,"color":"#4c4cff","clickEvent":{"action":"open_url","value":"https://github.com/Ai-Akaishi/ScoreToHealth"}},{"text":"が導入されていないため\nPlayerにダメージを与えることは出来ません","color":"white"}]
     # Mob
-        execute if entity @s[type=!player] if score $Health ScoreDamageCore matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $SubtractedHealth ScoreDamageCore
+        execute if entity @s[type=!player] if score $SubtractedHealth ScoreDamageCore matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $SubtractedHealth ScoreDamageCore
 
     # プレイヤー、またはドラゴンでないなら、ヘルス0でキル
-        execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run kill @s
+        #execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run kill @s
+        execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run say 死んだわ
 
     # ドラゴンならヘルス0でDragonPhaseを9にして墜落させる
         execute if entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run data merge entity @s {DragonPhase:9}

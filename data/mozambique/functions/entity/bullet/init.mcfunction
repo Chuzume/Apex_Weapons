@@ -4,7 +4,7 @@ tp @s ~ ~-0.15 ~
 kill @e[type=area_effect_cloud,tag=Moza_Spread]
 tag @s add Moza_Bullet
 tag @s remove Moza_BulletInit
-scoreboard players set @s Moza_Speed 40
+scoreboard players set @s Moza_Speed 30
 scoreboard players set @s Moza_Range 400
 
 # UUIDコピー
