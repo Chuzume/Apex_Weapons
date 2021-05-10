@@ -1,11 +1,11 @@
 
 
 # 何で攻撃されたのかタグ付与
-    tag @s remove Moza_Hit.Bullet
-    tag @s add Moza_Hit.BulletHS
+    tag @s remove C.Apex_Hit.Bullet
+    tag @s add C.Apex_Hit.BulletHS
 
 # 
-    execute as @e[tag=Moza_Bullet,sort=nearest,limit=1] at @a if score @s Moza_En.ID = @p Moza_Pl.ID run playsound entity.arrow.hit_player player @p ~ ~ ~ 1 1
+    execute as @e[tag=C.Apex_Bullet,sort=nearest,limit=1] at @a if score @s C.Apex_En.ID = @p C.Apex_Pl.ID run playsound entity.arrow.hit_player player @p ~ ~ ~ 1 1
 
 # ダメージを設定
     data merge storage moza_score_damage: {Damage:1.5}

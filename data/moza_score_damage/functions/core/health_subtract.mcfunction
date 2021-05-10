@@ -26,8 +26,7 @@
         execute if entity @s[type=!player] if score $SubtractedHealth ScoreDamageCore matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $SubtractedHealth ScoreDamageCore
 
     # プレイヤー、またはドラゴンでないなら、ヘルス0でキル
-        #execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run kill @s
-        execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run say 死んだわ
+        execute unless entity @s[type=player] unless entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run kill @s
 
     # ドラゴンならヘルス0でDragonPhaseを9にして墜落させる
         execute if entity @s[type=ender_dragon] if score $SubtractedHealth ScoreDamageCore matches ..0 run data merge entity @s {DragonPhase:9}
@@ -39,8 +38,8 @@
         execute if entity @s[type=player] run effect give @s instant_damage 1 30 true
 
     # プレイヤーかつヘルス0なら死亡メッセージ
-        execute if entity @s[type=player,tag=Moza_Hit.Bullet] if score @s ScoreToHealth matches ..0 run function mozambique:message/death/moza_bullet
-        execute if entity @s[type=player,tag=Moza_Hit.BulletHS] if score @s ScoreToHealth matches ..0 run function mozambique:message/death/moza_bullet_headshot
+        execute if entity @s[type=player,tag=C.Apex_Hit.Bullet] if score @s ScoreToHealth matches ..0 run function mozambique:message/death/moza_bullet
+        execute if entity @s[type=player,tag=C.Apex_Hit.BulletHS] if score @s ScoreToHealth matches ..0 run function mozambique:message/death/moza_bullet_headshot
 # 演出
     #execute if score $Health ScoreDamageCore matches 1.. if entity @s[type=!player] run data modify entity @s ActiveEffects append value {Id:19b,Amplifier:4b,Duration:1}
     function moza_score_damage:core/damage_indicator
@@ -52,5 +51,5 @@
     scoreboard players reset $hasDependency
 
 # 何から攻撃されたかリセット
-    tag @s remove Moza_Hit.Bullet
-    tag @s remove Moza_Hit.BulletHS
+    tag @s remove C.Apex_Hit.Bullet
+    tag @s remove C.Apex_Hit.BulletHS
