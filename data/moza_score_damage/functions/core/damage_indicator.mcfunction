@@ -37,3 +37,5 @@
     execute if score $Damage ScoreDamageCore matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 2
     scoreboard players operation $Damage ScoreDamageCore *= $2 ScoreDamageCore
     execute if score $Damage ScoreDamageCore matches ..-1 run particle damage_indicator ~ ~1.2 ~ 0.5 0.5 0.5 0 1
+# ドラゴンならダメージおと
+    execute if entity @s[type=ender_dragon,nbt=!{Silent:1b,DragonPhase:9}] run playsound minecraft:entity.ender_dragon.hurt hostile @a ~ ~ ~ 5 1

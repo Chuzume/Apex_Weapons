@@ -8,10 +8,13 @@
     scoreboard objectives add C.Apex_Temp dummy
     scoreboard objectives add C.Apex_Recursion dummy
     scoreboard objectives add C.Apex_Delay dummy
-    scoreboard objectives add C.Apex_Reload dummy
     scoreboard objectives add C.Apex_Ammo dummy
     scoreboard objectives add C.Apex_Spin dummy
     scoreboard objectives add C.Apex_Install dummy
+
+# リロード用
+    scoreboard objectives add C.Apex_R.Moza dummy
+    scoreboard objectives add C.Apex_R.H.Moza dummy
 
 # スコアIDだ
     scoreboard objectives add C.Apex_Pl.IDCore dummy

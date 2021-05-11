@@ -1,15 +1,11 @@
 
-# アイテム所持のタグ付与
-    tag @s add C.Apex_Hold
-
 # 弾切れならリロード処理に
-    execute if entity @s[scores={C.Apex_Ammo=..0,C.Apex_Shot=0..}] run function mozambique:item/mozambique/reload_start
+    execute if entity @s[scores={C.Apex_Ammo=..0,C.Apex_Shot=0..}] run function mozambique:item/hyper_mozambique/reload_start
 
 # 発砲(非スニーク)
-    execute unless score @s[predicate=!mozambique:sneak,scores={C.Apex_Ammo=1..,C.Apex_Shot=0..}] C.Apex_Delay matches 1.. run function mozambique:item/mozambique/shot
-
+    execute if data storage chuz:context Item.Mainhand.tag.Delay{Ammo:0} if entity @s[predicate=!mozambique:sneak,scores={C.Apex_Ammo=1..,C.Apex_Shot=0..}] run function mozambique:item/hyper_mozambique/shot
 # 発砲(スニーク)
-    execute unless score @s[predicate=mozambique:sneak,scores={C.Apex_Ammo=1..,C.Apex_Shot=0..}] C.Apex_Delay matches 1.. run function mozambique:item/mozambique/shot_ads
+    execute if data storage chuz:context Item.Mainhand.tag.Delay{Ammo:0} if entity @s[predicate=mozambique:sneak,scores={C.Apex_Ammo=1..,C.Apex_Shot=0..}] run function mozambique:item/hyper_mozambique/shot_ads
 
 # ディレイ
     execute if score @s C.Apex_Delay matches 1.. run scoreboard players remove @s C.Apex_Delay 1
@@ -22,16 +18,16 @@
     title @s[scores={C.Apex_Ammo=1..}] actionbar [{"text":"| Ammo: "},{"score":{"name":"@s","objective":"C.Apex_Ammo"}},{"text":" |"}]
     title @s[scores={C.Apex_Ammo=..0}] actionbar [{"text":"| Ammo: 0 |","color": "red"}]
 
-# Replace処理
-    execute if data storage chuz:context Item.Mainhand.tag.Ammo if entity @s[tag=C.Apex_Hold,scores={C.Apex_Ammo=0..}] run function mozambique:item/mozambique/replaceitem
-
 # 見た目
 # 通常時
-    execute if entity @s[tag=!C.Apex_ADSShot] run scoreboard players set $CMD Chuz.Temporary 12
+    execute if entity @s[tag=!C.Apex_ADSShot] run scoreboard players set $CMD Chuz.Temporary 16
 # 反動(腰だめ)
-    execute if entity @s[tag=!C.Apex_ADSShot] if score @s C.Apex_Delay matches 4..8 run scoreboard players set $CMD Chuz.Temporary 13
+    execute if entity @s[tag=!C.Apex_ADSShot] if score @s C.Apex_Delay matches 2..4 run scoreboard players set $CMD Chuz.Temporary 17
 # ADS
-    execute if entity @s[tag=!C.Apex_NormalShot] if predicate mozambique:sneak run scoreboard players set $CMD Chuz.Temporary 14
-    execute if entity @s[tag=C.Apex_ADSShot] run scoreboard players set $CMD Chuz.Temporary 14
+    execute if entity @s[tag=!C.Apex_NormalShot] if predicate mozambique:sneak run scoreboard players set $CMD Chuz.Temporary 18
+    execute if entity @s[tag=C.Apex_ADSShot] run scoreboard players set $CMD Chuz.Temporary 18
 # 反動(ADS)
-    execute if entity @s[tag=!C.Apex_NormalShot] if score @s C.Apex_Delay matches 4..8 run scoreboard players set $CMD Chuz.Temporary 15
+    execute if entity @s[tag=!C.Apex_NormalShot] if score @s C.Apex_Delay matches 2..4 run scoreboard players set $CMD Chuz.Temporary 19
+
+# Replace処理
+    execute if entity @s[tag=!Test] if data storage chuz:context Item.Mainhand.tag.Ammo run function mozambique:item/hyper_mozambique/replaceitem
