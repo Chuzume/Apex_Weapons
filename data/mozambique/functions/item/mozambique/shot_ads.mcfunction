@@ -1,14 +1,12 @@
 
-# 拡散と距離の設定
-    scoreboard players operation $spread ForwardSpread = @s C.Apex_Spread
-    scoreboard players set $distance ForwardSpread 210
-    
 # 発砲!
     playsound minecraft:ui.stonecutter.take_result block @a ~ ~ ~ 2 2
     playsound minecraft:entity.firework_rocket.blast player @a ~ ~ ~ 1.5 0.5
     playsound minecraft:block.chain.break player @a ~ ~ ~ 2 2
     playsound minecraft:entity.shulker.shoot player @a ~ ~ ~ 2 2
-    scoreboard players set @s C.Apex_Delay 8
+    playsound minecraft:entity.blaze.hurt player @a ~ ~ ~ 1 1.5
+    scoreboard players reset @s C.Apex_Delay
+
     tag @s add C.Apex_ADSShot
 
 # 弾を召喚
@@ -26,5 +24,5 @@
     execute as @e[type=armor_stand,tag=C.Apex_BulletInit] at @s run function mozambique:entity/bullet/init
 
 # 弾丸消費
-    function mozambique:item/mozambique/ammo
+    function mozambique:item/consume_ammo
     scoreboard players remove @s C.Apex_Ammo 1

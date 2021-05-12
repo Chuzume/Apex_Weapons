@@ -6,7 +6,7 @@
     scoreboard players remove $Ammo Chuz.Temporary 1
 
 # 置き換え
-    data modify storage chuz:context Item set value {Slot:0b,id:"minecraft:stone",Count:1b}
+    data modify storage chuz:context Item set value {Slot:0b}
     data modify storage chuz:context Item merge from entity @s SelectedItem
     execute store result storage chuz:context Item.Mainhand.tag.CustomModelData int 1 run scoreboard players get $CMD Chuz.Temporary
     execute store result storage chuz:context Item.tag.Ammo int 1 run scoreboard players get $Ammo Chuz.Temporary
