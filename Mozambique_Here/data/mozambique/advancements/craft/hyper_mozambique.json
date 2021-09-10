@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "mozambique:hyper_mozambique"
+      }
+    }
+  },
+  "rewards": {
+    "function": "mozambique:craft/hyper_mozambique"
+  }
+}
